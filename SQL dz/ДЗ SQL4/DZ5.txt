@@ -1,0 +1,23 @@
+CREATE ROLE test_user
+  WITH LOGIN
+       PASSWORD '12345678';
+
+GRANT CONNECT ON DATABASE mydb TO test_user;
+
+GRANT ALL PRIVILEGES
+  ON TABLE dz_table
+  TO test_user;
+
+GRANT ALL PRIVILEGES
+  ON ALL TABLES IN SCHEMA public
+  TO test_user;
+
+REVOKE ALL PRIVILEGES
+  ON TABLE dz_table
+  FROM test_user;
+
+REVOKE ALL PRIVILEGES
+  ON ALL TABLES IN SCHEMA public
+  FROM test_user;
+
+DROP ROLE test_user;

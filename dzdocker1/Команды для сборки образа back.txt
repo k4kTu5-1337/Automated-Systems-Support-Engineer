@@ -1,0 +1,3 @@
+cd /home/student
+docker build -t my_back_image --build-arg APP_NAME=hw1 .
+

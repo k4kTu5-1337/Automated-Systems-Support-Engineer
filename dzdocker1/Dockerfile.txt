@@ -1,0 +1,11 @@
+FROM alpine
+
+ARG APP_NAME=hw1
+
+RUN mkdir -p /app
+COPY my_app /app/${APP_NAME}
+RUN chmod +x /app/${APP_NAME}
+
+WORKDIR /app
+
+CMD ["./hw1"]

@@ -1,0 +1,8 @@
+ALTER TABLE dz_table
+  ADD COLUMN comment_field VARCHAR(50)
+    NOT NULL
+    DEFAULT 'no comments'
+    CHECK (comment_field <> 'no');
+
+ALTER TABLE dz_table
+  ALTER COLUMN comment_field DROP NOT NULL;

@@ -1,0 +1,22 @@
+{
+    "fiscalReceipt": {
+        "header": {
+            "cashier": "Путин В.В.",
+            "shopName": "Магнит",
+            "address": "г. Дзержинск, ул. Октябрьская, д. 62",
+            "dateTime": "2025-04-29T14:30:00"
+        },
+        "items": [
+            {
+                "name": "Хлеб",
+                "quantity": 1,
+                "price": 50
+            },
+            {
+                "name": "Яйца куриные (10 шт.)",
+                "quantity": 1,
+                "price": 120
+            }
+        ]
+    }
+}

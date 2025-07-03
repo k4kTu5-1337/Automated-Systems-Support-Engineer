@@ -1,0 +1,20 @@
+#создание внутренней сети
+docker network create my_net 
+
+#запуск контейнера back
+docker run -d --name back --network my_net my_back_image
+
+#создал директорию для nginx
+mkdir -p /home/student/nginx_conf
+#перместил default.conf в директорию nginx_conf 
+cp /home/student/default.conf /home/student/nginx_conf/
+
+#запуск контейнера front
+docker run -d --name front \
+  --network my_net \
+  -p 8080:8080 \
+  -v /home/student/nginx_conf/default.conf:/etc/nginx/conf.d/default.conf:ro \
+  nginx
+
+#проверка результата 
+curl http://localhost:8080

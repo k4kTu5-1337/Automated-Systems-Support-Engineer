@@ -1,0 +1,2 @@
+ALTER TABLE dz_table
+  ALTER COLUMN text_field TYPE VARCHAR(25);

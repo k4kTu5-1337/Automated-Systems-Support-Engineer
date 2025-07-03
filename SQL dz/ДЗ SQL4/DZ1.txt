@@ -1,0 +1,5 @@
+CREATE TABLE dz_table (
+    numeric_field NUMERIC,
+    text_field   VARCHAR(12),
+    date_field   DATE            
+);

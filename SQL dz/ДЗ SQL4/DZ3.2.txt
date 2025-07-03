@@ -1,0 +1,6 @@
+INSERT INTO dz_table (numeric_field, text_field, date_field)
+VALUES (100, 'TEST', '2025-05-24');
+
+
+INSERT INTO dz_table (id, numeric_field, text_field, date_field)
+VALUES (1, 200, 'TEST2', '2025-05-24');
